@@ -22,18 +22,20 @@ main {
 
 #title {
   font-family: 'Inter'sans-serif;
-  font-size: 1.5em;
+  font-size: 1.8em;
   margin-bottom: 0.2em;
   color: #161616;
+  animation-delay: 15ms;
 }
 
 #description {
-  font-size: 0.8em;
-  font-style: italic;
+  font-size: 1em;
+  font-weight: lighter;
   opacity: 0.8;
+  animation-delay: 25ms;
 }
 
-#description, form, textarea {
+#description, form, textarea, select, .tooltip {
   font-family: 'Poppins', sans-serif;
   color: #152D35;
 }
@@ -45,6 +47,25 @@ form {
   margin: 2em auto;
   text-align: left;
   line-height: 1.5;
+  animation-delay: 50ms;
+}
+
+.translate {
+  transform: translateX(-10000px);
+  animation-name: translate;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes translate {
+  0% {
+    transform: translateX(-1000px);
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
 }
 
 #name, #email, #number, #dropdown {
@@ -81,8 +102,58 @@ fieldset {
 
 button {
   padding: 1em 2em;
-  border: 1px solid;
+  border: none;
   border-radius: 7px;
   background-color: #152D35;
   color: #F2FFE9;
+}
+
+.tooltip {
+  width: 10em;
+  padding: 1.2em 1.5em;
+  position: relative;
+  font-size: 0.8em;
+  left: 8em;
+  bottom: 5em;
+  background: rgba(249, 243, 223, .9);
+  border-radius: 7px;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.tooltip::after {
+  content: " ";
+  position: absolute;
+  right: 100%;
+  top: 35%;
+  border: 5px solid;
+  border-color: transparent rgba(249, 243, 223, .9) transparent transparent;
+}
+
+.tip-container:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Responsive styles */
+@media screen and (min-width: 650px) {
+  form {
+    width: 65vw;
+    margin: 2em 2.5em;
+  }
+
+  #title {
+    font-family: 'Inter'sans-serif;
+    font-size: 2em;
+  }
+
+  #description {
+    font-size: 1.2em;
+  }
+
+  .tooltip {
+    width: 35em;
+    bottom: 4em;
+  }
 }

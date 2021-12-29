@@ -11,16 +11,18 @@
 
   <body>
     <main>
-      <h1 id="title">Labdx Feedback Form</h1>
-      <p id="description">Thank you for helping us develop the platform that helps you live a healthy, hearty and happy life</p>
+      <h1 id="title"
+        class="translate">Labdx Feedback Form</h1>
+      <p id="description"
+        class="translate">Thank you for helping us develop the platform that helps you live a healthy, hearty and happy life</p>
 
-      <form class=""
+      <form class="translate"
         id="survey-form"
         action=""
         method="post">
 
         <label for="name"
-          id="name-label">Your full name:</label><br>
+          id="name-label">Your name:</label><br>
         <input type="text"
           id="name"
           name="name"
@@ -29,12 +31,12 @@
           required><br><br>
 
         <label for="email"
-          id="email-label">Your email</label><br>
+          id="email-label">Your email:</label><br>
         <input type="email"
           id="email"
           name="email"
           value=""
-          placeholder="Enter your Email"
+          placeholder="Enter your email"
           required><br><br>
 
         <label for="number"
@@ -49,7 +51,7 @@
           required><br><br>
 
         <fieldset required>
-          <legend>Select any of the activities your engage in to stay healthy(Select as many options that apply)</legend>
+          <legend>Select any of the activities your engage in to stay healthy (Select as many options that apply)</legend>
           <input type="checkbox"
             name=""
             value="Routine health checkups"> Routine health checkups <br>
@@ -65,7 +67,7 @@
         </fieldset><br><br>
 
         <fieldset required>
-          <legend>What's your gener?</legend>
+          <legend>What's your gender?</legend>
           <input type="radio"
             name="gender"
             value="choice 1"> Male <br>
@@ -78,8 +80,7 @@
         </fieldset><br><br>
 
 
-        <label for="dropdown">Which option best describes your current position(Optional)</label><br>
-
+        <label for="dropdown">Which option best describes your current position (Optional)</label><br>
         <select class=""
           name=""
           id="dropdown">
@@ -87,20 +88,20 @@
           <option value="Student">Student</option>
           <option value="Self-Employed">Self-Employed</option>
           <option value="Unemployed">Unemployed</option>
-
         </select><br><br>
 
         <label for="textarea">Any additional feedback you will like to share with us?</label><br>
         <textarea name="message"
           rows="8"
           placeholder="Enter your message here...">
+        </textarea><br><br>
 
-</textarea><br><br>
-
-
-        <button type="submit"
-          id="submit"
-          name="button">Submit</button>
+        <span class="tip-container">
+          <button type="submit"
+            id="submit"
+            name="button">Submit</button>
+          <p class="tooltip">This is just a practice form. It does not actually submit anywhere. </p>
+        </span>
 
       </form>
     </main>
