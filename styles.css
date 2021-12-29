@@ -5,10 +5,8 @@
 }
 
 body {
-  background-image: url('images/priscilla-du-preez-nF8xhLMmg0c-unsplash.jpg');
+  background: url('images/priscilla-du-preez-nF8xhLMmg0c-unsplash.jpg') no-repeat center;
   background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 main {
@@ -19,20 +17,20 @@ main {
 
 #title, #description {
   margin: 0 auto;
-}
-
-#description {
-  font-size: 1.2em;
-  font-style: italic;
-  opacity: 0.8;
+  width: 75vw;
 }
 
 #title {
   font-family: 'Inter'sans-serif;
-  font-size: 2.4em;
-  width: 35vw;
+  font-size: 1.5em;
   margin-bottom: 0.2em;
   color: #161616;
+}
+
+#description {
+  font-size: 0.8em;
+  font-style: italic;
+  opacity: 0.8;
 }
 
 #description, form, textarea {
@@ -41,31 +39,40 @@ main {
 }
 
 form {
-  width: 50vw;
+  width: 80vw;
   background: linear-gradient(45deg, rgba(206, 229, 208, 0.7), rgba(85, 124, 85, 0.8));
   padding: 1em;
-  margin: 2em 1em;
+  margin: 2em auto;
   text-align: left;
   line-height: 1.5;
 }
 
 #name, #email, #number, #dropdown {
-  width: 85%;
   height: 2.5em;
   border: 1px solid rgba(206, 229, 208, 0.7);
   border-radius: 7px;
   padding: 0 1em;
 }
 
+#name, #email, #number, #dropdown, textarea {
+  width: 100%;
+}
+
 input, select, textarea {
   margin-top: 1em;
 }
 
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  background: rgba(249, 243, 223, 1);
+  border: none;
+}
+
+/* input, select, textarea:active */
 textarea {
-  width: 85%;
   border: 1px solid rgba(206, 229, 208, 0.7);
   border-radius: 7px;
-  padding: 0 1em;
+  padding: 1em 1em;
 }
 
 fieldset {
