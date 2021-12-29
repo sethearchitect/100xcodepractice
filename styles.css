@@ -30,7 +30,7 @@ main {
 
 #description {
   font-size: 1em;
-  font-weight: lighter;
+  font-weight: normal;
   opacity: 0.8;
   animation-delay: 25ms;
 }
