@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+:root {
+  --primaryfont: 'Ubuntu', sans-serif;
+  --secondaryfont: 'Spline', sans-serif;
+  --backgroundcolor: #E7E0C9;
+  --primarycolor: #11324D;
+  --secondarycolor: #9A9483;
+  --margin: 0 1em;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--primaryfont);
+}
+
+p, li, input, label {
+  font-family: var(--secondaryfont);
+}
+
+ul {
+  list-style: none;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1em;
+  gap: 1em;
+}
+
+nav li {
+  margin-top: 1em;
+}
+
+.banner {
+  padding: 1.2em 1em;
+  text-align: center;
+  background-color: var(--backgroundcolor);
+}
+
+.banner>* {
+  margin-bottom: 1em;
+}
+
+.header-text {
+  font-weight: 500;
+  color: var(--primarycolor);
+}
+
+p.description {
+  text-align: justify;
+  color: var(--secondarycolor);
+}
