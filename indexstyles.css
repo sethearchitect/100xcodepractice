@@ -1,9 +1,6 @@
-* {
+*, html {
   margin: 0;
   padding: 0;
-}
-
-html {
   box-sizing: border-box;
 }
 
@@ -12,8 +9,10 @@ html {
   --secondaryfont: 'Spline', sans-serif;
   --backgroundcolor: #E7E0C9;
   --primarycolor: #11324D;
-  --secondarycolor: #9A9483;
+  --secondarycolor: #191919;
   --margin: 0 1em;
+  --padding: 1.2em 1em;
+  --line-height: calc('font-size'* 1.5)
 }
 
 h1, h2, h3, h4 {
@@ -22,6 +21,7 @@ h1, h2, h3, h4 {
 
 p, li, input, label {
   font-family: var(--secondaryfont);
+  font-size: 1em;
 }
 
 ul {
@@ -40,6 +40,11 @@ nav li {
   margin-top: 1em;
 }
 
+nav li a {
+  color: inherit;
+  text-decoration: none;
+}
+
 .banner {
   padding: 1.2em 1em;
   text-align: center;
@@ -55,7 +60,54 @@ nav li {
   color: var(--primarycolor);
 }
 
-p.description {
-  text-align: justify;
+p.description, label[for='email'] {
   color: var(--secondarycolor);
+  font-size: 0.9em;
+}
+
+p.description {
+  line-height: var(--line-height);
+}
+
+form input#email {
+  border: none;
+  border-bottom: 1px solid;
+  margin: 1em 0;
+  padding: 0.4em 0.8em;
+}
+
+form input#email:active, form input#email:focus {
+  background: linear-gradient(to bottom, #fff, var(--backgroundcolor));
+  border-bottom: var(--primarycolor);
+  outline: none;
+}
+
+input[type='submit'] {
+  padding: 0.4em 0.8em;
+  background-color: var(--primarycolor);
+  color: #fff;
+  border: none;
+  border-radius: 0.2em;
+}
+
+input[type='submit']:hover {
+  background-color: var(--backgroundcolor);
+  color: var(--primarycolor);
+  box-shadow: 0px 2px 6px var(--secondarycolor);
+}
+
+section#about {
+  padding: var(--padding);
+  text-align: center;
+  margin-top: 1.2em;
+}
+
+#about h2 {
+  color: var(--primarycolor);
+  margin-bottom: 1em;
+}
+
+#about h2:hover {
+  border-bottom: 1px solid;
+  transition: border 2s ease;
 }
