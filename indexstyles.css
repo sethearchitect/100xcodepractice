@@ -7,10 +7,12 @@
 :root {
   --primaryfont: 'Ubuntu', sans-serif;
   --secondaryfont: 'Spline', sans-serif;
-  --backgroundcolor: #E7E0C9;
+  --backgroundcolor: rgb(244, 247, 197);
   --primarycolor: #11324D;
   --secondarycolor: #191919;
+  --outlinecolor: rgb(170, 205, 190);
   --neutralwhite: #FAFAFA;
+  --accent: #E7E0C9;
   --margin: 0 1em;
   --padding: 1.2em 1em;
   --line-height: calc(0.8em * 1.5)
@@ -34,7 +36,7 @@ ul {
 }
 
 .card-setup {
-  border: 1px solid var(--secondarycolor);
+  border: 1px solid var(--outlinecolor);
   border-radius: 4px;
   padding: 1em 1.2em;
 }
@@ -42,11 +44,21 @@ ul {
 /* Main body styles */
 /* Header styles */
 header {
-  display: flex;
-  flex-direction: column;
+  /* display: flex;
+  flex-direction: row; */
   align-items: center;
   padding-top: 1em;
   gap: 1em;
+  background: var(--accent);
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  left: 0;
+}
+
+nav ul {
+  /* display: flex;
+  flex-flow: row wrap; */
 }
 
 nav li {
@@ -114,7 +126,8 @@ input[type='submit']:hover {
 section#about, section#features, section#services {
   padding: var(--padding);
   text-align: center;
-  margin-top: 1.2em;
+  margin: 1.2em auto 0;
+  max-width: 700px;
 }
 
 #about h2, #features h2, #services h2 {
@@ -134,23 +147,27 @@ section#about, section#features, section#services {
 
 .grid1 {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   grid-auto-flow: row;
   grid-gap: 1em;
+  justify-items: center;
 }
 
 .grid1 div {
+  max-width: 220px;
   height: 120px;
 }
 
-.feature-1 {
-  grid-column: 1/2;
+.video-embed {
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
-.video-embed {
-  display: block;
+.video-embed video {
   max-width: 100%;
   height: auto;
+  margin: 0 auto;
 }
 
 .grid2 {
@@ -162,6 +179,16 @@ section#about, section#features, section#services {
 
 .services {
   height: auto;
+  background: var(--neutralwhite);
+  border: 1px solid var(--outlinecolor);
+  border-radius: 4px;
+}
+
+.card-title {
+  background: #f4f7c5;
+  width: 100%;
+  padding: 0.5em 1em;
+  border-radius: 4px;
 }
 
 .services p {
@@ -172,10 +199,11 @@ section#about, section#features, section#services {
   color: var(--secondarycolor);
   font-size: 0.8em;
   text-align: left;
+  padding: 1em 1.2em;
 }
 
 .services ul li {
-  margin-bottom: calc(0.8em * 1.5);
+  margin-bottom: calc(0.7em * 1.5);
 }
 
 .services:hover {
@@ -184,4 +212,46 @@ section#about, section#features, section#services {
 
 #footer {
   text-align: center;
+  padding: var(--padding);
+  background: var(--accent)
+}
+
+#footer .contact-us form {
+  text-align: left;
+}
+
+#textarea {
+  margin: 1em auto;
+  width: 100%;
+  max-width: 300px;
+}
+
+#footer p {
+  color: grey;
+  margin-top: 1em;
+}
+
+/* Responsive media styles */
+@media screen and (min-width: 365px) and (max-width: 520px) {
+  .feature-3 {
+    grid-column: 1/3;
+  }
+}
+
+@media screen and (min-width: 464px) and (max-width: 680px) {
+  .services-3 {
+    grid-column: 1/3;
+  }
+
+  .services-3 ul {
+    display: inline-block;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 760px) {
+  .description {
+    width: 45vw;
+    margin: 0 auto 1.2em;
+  }
 }

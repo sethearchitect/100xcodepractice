@@ -4,10 +4,12 @@
 
   <head>
     <meta charset="utf-8">
-    <link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;500&family=Ubuntu:wght@300;500&display=swap"
-      rel="stylesheet">
     <link rel="stylesheet"
       href="indexstyles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;500&family=Ubuntu:wght@300;500&display=swap"
+      rel="stylesheet">
+    <script src="https://kit.fontawesome.com/yourcode.js"
+      crossorigin="anonymous"></script>
     <title>LabDx Healthcare</title>
   </head>
 
@@ -49,8 +51,8 @@
 
       <section id="about">
         <h2>About</h2>
-        <p>Many Nigerians suffer a great deal from illnesses and diseases that
-          could be easily avoided or managed if identified early and with adequate guidance.
+        <p>With timely checkups and adequate guidance, We can prevent some of the
+          numerous health problems that plagues us as Nigerians.
           Labdx is building a platform and community that helps Nigerians proactively detect
           these healthcare challenges while also providing access to high quality counselling
           and guidance to deal with those challenges from professionals and experts </p>
@@ -87,21 +89,24 @@
       <section id="services">
         <h2>Services</h2>
         <div class="grid2">
-          <div class="services card-setup">
-            <h4>walk-in consultation</h4>
-            <p>pay per test</p>
+          <div class="services">
+            <div class="card-title">
+              <h4>walk-in consultation</h4>
+              <p>pay per test</p>
+            </div>
 
             <ul>
               <li>Do as many tests as you want</li>
               <li>consultant acess</li>
-              <li>Sample pickup</li>
+
             </ul>
           </div>
 
-          <div class="services card-setup">
-            <h4>Customer consultation</h4>
-            <p>N500/month</p>
-
+          <div class="services">
+            <div class="card-title">
+              <h4>Customer consultation</h4>
+              <p>N500/month</p>
+            </div>
             <ul>
               <li>Do as many tests as you want</li>
               <li>Extended consultant acess</li>
@@ -110,10 +115,11 @@
             </ul>
           </div>
 
-          <div class="services card-setup">
-            <h4>Member consultation</h4>
-            <p>N1500/month</p>
-
+          <div class="services services-3">
+            <div class="card-title">
+              <h4>Member consultation</h4>
+              <p>N1500/month</p>
+            </div>
             <ul>
               <li>Do as many tests as you want</li>
               <li>Routine monthly health checkups</li>
@@ -134,19 +140,20 @@
             <label for="textarea">Have a health challenge?</label><br>
             <textarea id="textarea"
               name="message"
-              rows="6"
-              cols="15">
-              Type your message
+              rows="6">Type your message
             </textarea><br>
 
             <input type="submit">
-
           </form>
-          <p>Or reach out on social media</p>
-          <a href="#">facebook</a>
+        </div>
+
+        <p>Or reach out on social media</p>
+        <div class="sm-icons">
+          <a href="#"><i class="fa fa-facebook"></i> </a>
           <a href="#">whatsapp</a>
           <a href="#">email</a>
         </div>
+
         <p>copyright Labdx 2021.</p>
       </footer>
     </main>
