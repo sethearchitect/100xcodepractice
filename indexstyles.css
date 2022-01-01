@@ -50,10 +50,10 @@ header {
   padding-top: 1em;
   gap: 1em;
   background: var(--accent);
-  position: fixed;
+  /* position: fixed;
   width: 100vw;
   top: 0;
-  left: 0;
+  left: 0; */
 }
 
 nav ul {
@@ -239,11 +239,11 @@ section#about, section#features, section#services {
 }
 
 @media screen and (min-width: 464px) and (max-width: 680px) {
-  .services-3 {
-    grid-column: 1/3;
+  .service-3 {
+    grid-column: 1/4;
   }
 
-  .services-3 ul {
+  .service-3 ul {
     display: inline-block;
     margin: 0 auto;
   }
