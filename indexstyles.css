@@ -1,15 +1,20 @@
+/* Global/General style declarations */
 *, html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
-  --primaryfont: 'Ubuntu', sans-serif;
+  --primaryfont: 'Merriweather', serif;
   --secondaryfont: 'Spline', sans-serif;
   --backgroundcolor: rgb(244, 247, 197);
   --primarycolor: #11324D;
-  --secondarycolor: #191919;
+  --secondarycolor: rgb(40, 40, 40);
   --outlinecolor: rgb(170, 205, 190);
   --neutralwhite: #FAFAFA;
   --accent: #E7E0C9;
@@ -26,6 +31,10 @@ h3 {
   font-size: 1em;
 }
 
+h3, h4, .card-title p {
+  color: var(--secondarycolor);
+}
+
 p, li, input, label {
   font-family: var(--secondaryfont);
   font-size: 1em;
@@ -35,30 +44,39 @@ ul {
   list-style: none;
 }
 
+/* Atomic classes */
 .card-setup {
   border: 1px solid var(--outlinecolor);
   border-radius: 4px;
   padding: 1em 1.2em;
 }
 
-/* Main body styles */
+/* Body Content styles
+
+ */
 /* Header styles */
 header {
-  /* display: flex;
-  flex-direction: row; */
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  padding-top: 1em;
-  gap: 1em;
+  padding: 1em 0;
+  gap: 0.5em;
   background: var(--accent);
-  /* position: fixed;
-  width: 100vw;
+  position: sticky;
   top: 0;
-  left: 0; */
+  z-index: 555;
+  width: 100vw;
+  height: 50px;
+  overflow-y: hidden;
+  transition: 1s ease;
+}
+
+header:hover {
+  height: 180px;
 }
 
 nav ul {
-  /* display: flex;
-  flex-flow: row wrap; */
+  text-align: center;
 }
 
 nav li {
@@ -70,9 +88,18 @@ nav li a {
   text-decoration: none;
 }
 
+nav li a:hover,
+nav li a:active {
+  color: var(--neutralwhite);
+  text-decoration: underline;
+}
+
+/* Main styles
+
+ */
 /* Banner styles */
 .banner {
-  padding: 1.2em 1em;
+  padding: 1.8em 2em;
   text-align: center;
   background-color: var(--backgroundcolor);
 }
@@ -82,7 +109,7 @@ nav li a {
 }
 
 .header-text {
-  /* font-weight: 500; */
+  font-weight: 700;
   color: var(--primarycolor);
 }
 
@@ -100,11 +127,12 @@ form input#email {
   border-bottom: 1px solid;
   margin: 1em 0;
   padding: 0.4em 0.8em;
+  width: clamp(280px, 3vw, 700px);
 }
 
 form input#email:active, form input#email:focus {
   background: linear-gradient(to bottom, #fff, var(--backgroundcolor));
-  border-bottom: var(--primarycolor);
+  border: 1px solid var(--primarycolor);
   outline: none;
 }
 
@@ -122,7 +150,6 @@ input[type='submit']:hover {
   box-shadow: 0px 2px 6px var(--secondarycolor);
 }
 
-/* body content styles */
 section#about, section#features, section#services {
   padding: var(--padding);
   text-align: center;
@@ -154,20 +181,32 @@ section#about, section#features, section#services {
 }
 
 .grid1 div {
+  display: flex;
+  flex-direction: column;
   max-width: 220px;
-  height: 120px;
+  height: 170px;
+}
+
+.grid1 div h3 {
+  flex-grow: 1;
+}
+
+.grid1 div i {
+  font-size: 2em;
+  color: var(--secondarycolor);
+  margin-top: 1.2em;
 }
 
 .video-embed {
   max-width: 100%;
   display: flex;
   justify-content: center;
+  margin: 2em 0;
 }
 
 .video-embed video {
   max-width: 100%;
   height: auto;
-  margin: 0 auto;
 }
 
 .grid2 {
@@ -178,7 +217,10 @@ section#about, section#features, section#services {
 }
 
 .services {
+  display: flex;
+  flex-flow: column;
   height: auto;
+  padding-bottom: 1em;
   background: var(--neutralwhite);
   border: 1px solid var(--outlinecolor);
   border-radius: 4px;
@@ -200,6 +242,7 @@ section#about, section#features, section#services {
   font-size: 0.8em;
   text-align: left;
   padding: 1em 1.2em;
+  flex-grow: 1;
 }
 
 .services ul li {
@@ -208,6 +251,15 @@ section#about, section#features, section#services {
 
 .services:hover {
   box-shadow: 2px 2px 8px rgba(17, 50, 77, 0.5);
+}
+
+.services-button {
+  width: 100px;
+  padding: 0.5em 1em;
+  background-color: var(--primarycolor);
+  color: var(--neutralwhite);
+  border: none;
+  align-self: center;
 }
 
 #footer {
@@ -221,9 +273,11 @@ section#about, section#features, section#services {
 }
 
 #textarea {
+  --padding: 0.8em 1.2em;
   margin: 1em auto;
   width: 100%;
   max-width: 300px;
+  padding: var(--padding);
 }
 
 #footer p {
@@ -231,8 +285,20 @@ section#about, section#features, section#services {
   margin-top: 1em;
 }
 
+.sm-icons {
+  margin: 1em auto;
+  display: flex;
+  justify-content: space-between;
+  max-width: 60px;
+}
+
+.sm-icons a {
+  color: var(--secondarycolor);
+  text-decoration: none;
+}
+
 /* Responsive media styles */
-@media screen and (min-width: 365px) and (max-width: 520px) {
+@media screen and (min-width: 365px) and (max-width: 531px) {
   .feature-3 {
     grid-column: 1/3;
   }
@@ -253,5 +319,9 @@ section#about, section#features, section#services {
   .description {
     width: 45vw;
     margin: 0 auto 1.2em;
+  }
+
+  footer#footer {
+    padding: 2em 150px;
   }
 }

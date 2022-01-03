@@ -8,23 +8,26 @@
       content="width=device-width, initial-scale=1">
     <link rel="stylesheet"
       href="indexstyles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;500&family=Ubuntu:wght@300;500&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,300&family=Spline+Sans:wght@300&display=swap"
       rel="stylesheet">
-    <script src="https://kit.fontawesome.com/yourcode.js"
-      crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/7e19710f06.js"></script>
     <title>LabDx Healthcare</title>
   </head>
 
   <body>
     <header id="header">
-      <img src=""
+      <img src="https://www.pngkey.com/png/full/33-337638_medicine-logo-png-1-medical-logo.png"
         id="header-img"
-        alt="labdx logo">
+        alt="labdx logo"
+        width="40px">
       <nav id="nav-bar">
         <ul>
-          <li id="nav-link"><a href="#about">About</a></li>
-          <li id="nav-link"><a href="#features">Features</a> </li>
-          <li id="nav-link"><a href="#footer">Contact</a></li>
+          <li><a class="nav-link"
+              href="#about">About</a></li>
+          <li><a class="nav-link"
+              href="#features">Features</a> </li>
+          <li><a class="nav-link"
+              href="#footer">Contact</a></li>
         </ul>
       </nav>
     </header>
@@ -36,15 +39,17 @@
 
         <form id="form"
           class="email-list"
-          action=""
-          method="">
+          action="https://www.freecodecamp.com/email-submit"
+          method="GET">
           <label for="email">Start your journey to health and happiness</label><br>
           <input id="email"
             type="email"
             name="email"
             value=""
-            placeholder="enter your email..."><br>
+            placeholder="enter your email..."
+            tabindex="1"><br>
           <input type="submit"
+            id="submit"
             name=""
             value="Submit">
         </form>
@@ -63,35 +68,44 @@
         <div class="grid1">
           <div class="feature-1 card-setup">
             <h3>High quality Diagnostics</h3>
+            <i class="fa fa-check-square-o"
+              aria-hidden="true"></i>
 
           </div>
 
           <div class="feature-2 card-setup">
             <h3>On-demand access to consultants</h3>
+            <i class="fa fa-handshake-o"
+              aria-hidden="true"></i>
 
           </div>
 
           <div class="feature-3 card-setup">
             <h3>Flexible and supportive payment systems</h3>
+            <i class="fa fa-money"
+              aria-hidden="true"></i>
           </div>
         </div>
       </section>
 
       <div class="video-embed">
-        <video src="videofile.ogg"
-          autoplay
-          poster="posterimage.jpg"
-          controls
-          autoplay="none">
-        </video>
+        <iframe id="video"
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/yqS7oOSKPLw"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
 
       </div>
+
       <section id="services">
         <h2>Services</h2>
         <div class="grid2">
           <div class="services">
             <div class="card-title service-1">
-              <h4>walk-in consultation</h4>
+              <h4>Book a consultation</h4>
               <p>pay per test</p>
             </div>
 
@@ -100,6 +114,9 @@
               <li>consultant acess</li>
 
             </ul>
+            <button class="services-button"
+              type="button"
+              name="button">Select</button>
           </div>
 
           <div class="services">
@@ -113,6 +130,9 @@
               <li>Sample pickup</li>
               <li>Result delivery via call, text, or mail</li>
             </ul>
+            <button class="services-button"
+              type="button"
+              name="button">Select</button>
           </div>
 
           <div class="services service-3">
@@ -128,6 +148,9 @@
               <li>Result delivery via call, text, or mail</li>
               <li>Access to health materials and resources</li>
             </ul>
+            <button class="services-button"
+              type="button"
+              name="button">Select</button>
           </div>
         </div>
       </section>
@@ -149,14 +172,17 @@
 
         <p>Or reach out on social media</p>
         <div class="sm-icons">
-          <a href="#"><i class="fa fa-facebook"></i> </a>
-          <a href="#">whatsapp</a>
-          <a href="#">email</a>
+          <a href="#"><i class="fa fa-facebook-square"></i></i> </a>
+          <!-- <a href="#"><i class="fa fa-whatsapp-square"></i></a> -->
+          <a href="#"><i class="fa fa-envelope"></i></a>
         </div>
 
         <p>copyright Labdx 2021.</p>
       </footer>
     </main>
+
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"
+      charset="utf-8"></script>
 
   </body>
 
